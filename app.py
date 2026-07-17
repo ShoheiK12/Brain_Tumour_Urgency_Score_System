@@ -189,8 +189,8 @@ if uploaded_file is not None:
             
             st.write("")
             st.write(f"**Score breakdown:**")
-            st.write(f"- Volume Score: {volume_score:.2f} (Parameter: {volume_weight})")
-            st.write(f"- Shape Score: {shape_score:.2f} (Parameter: {shape_weight})")
+            st.write(f"- Volume Score: {volume_score:.2f} (Volume Weight: {volume_weight})")
+            st.write(f"- Shape Score: {shape_score:.2f} (Shape Weight: {shape_weight})")
             
     except Exception as e:
         st.error(f"An error occurred during analysis: {e}")
