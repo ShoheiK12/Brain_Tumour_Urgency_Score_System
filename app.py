@@ -20,6 +20,7 @@ st.markdown(
     """
     <style>
         .stApp {
+            background-color: #87CEEB
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         .block-container {
