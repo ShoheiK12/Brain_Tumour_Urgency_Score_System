@@ -39,6 +39,12 @@ st.markdown(
             color: #F8FAFC !important;
         }
         
+        [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, 
+        [data-testid="stSidebar"] h3, [data-testid="stSidebar"] label,
+        [data-testid="stSidebar"] p, [data-testid="stSidebar"] small {
+            color: #E2E8F0 !important;
+        }
+        
         [data-testid="stMetric"], .stMetric {
             background-color: #FFFFFF !important;
             border: 1px solid #E2E8F0 !important;
