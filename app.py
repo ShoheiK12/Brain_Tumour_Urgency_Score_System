@@ -15,6 +15,41 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown(
+    """
+    <style>
+        .stApp {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .block-container {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+
+        [data-testid="stFileUploader"] {
+            border: 2px dashed #CBD5E1;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #FFFFFF;
+        }
+
+        [data-testid="stSidebar"] {
+            background-color: #F1F5F9;
+        }
+
+        button[data-baseweb="tab"] {
+            font-weight: 600;
+        }
+        
+        button[aria-selected="true"] {
+            color: #4A90E2 !important;
+            border-bottom-color: #4A90E2 !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("🧠 Brain Tumor Urgency Score System")
 st.write("Upload your 3D MRI segmentation image (.nii.gz) to calculate an urgency score based on tumour volume and shape.")
 
@@ -39,6 +74,7 @@ shape_weight = st.sidebar.slider(
 
 
 # Shape metrics
+@st.cache_data(show_spinner=False)
 def compute_shape_metrics(binary_mask, voxel_spacing):
     binary_mask_int = binary_mask.astype(np.int8)
     coords_vox = np.argwhere(binary_mask_int)
