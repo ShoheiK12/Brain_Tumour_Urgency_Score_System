@@ -15,12 +15,11 @@ st.set_page_config(
     layout="wide"
 )
 
-# Styling
 st.markdown(
     """
     <style>
         .stApp {
-            background-color: #87CEEB;
+            background-color: #F8FAFC;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         .block-container {
@@ -35,8 +34,18 @@ st.markdown(
             background-color: #FFFFFF;
         }
 
-        [data-testid="stSidebar"] {
-            background-color: #F1F5F9;
+        [data-testid="stSidebar"], section[data-testid="stSidebar"] > div {
+            background-color: #1E293B !important; 
+            color: #F8FAFC !important;
+        }
+        
+        [data-testid="stMetric"], .stMetric {
+            background-color: #FFFFFF !important;
+            border: 1px solid #E2E8F0 !important;
+            border-radius: 10px !important;
+            padding: 15px !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
+            margin-bottom: 12px !important;
         }
 
         button[data-baseweb="tab"] {
@@ -46,6 +55,12 @@ st.markdown(
         button[aria-selected="true"] {
             color: #4A90E2 !important;
             border-bottom-color: #4A90E2 !important;
+        }
+        
+        h1 {
+            color: #0F172A !important; 
+            font-weight: 700 !important;
+            letter-spacing: -0.025em !important;
         }
     </style>
     """,
