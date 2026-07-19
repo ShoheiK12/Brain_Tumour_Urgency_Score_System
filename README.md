@@ -99,8 +99,10 @@ Ensure you have **Python 3.9** or higher installed on your system.
 
 ### 1. Clone the Repository
 Clone the project repository from GitHub and navigate into the project root directory:
-```bash
+
 git clone [https://github.com/ShoheiK12/Brain_Tumour_Urgency_Score_System.git](https://github.com/ShoheiK12/Brain_Tumour_Urgency_Score_System.git)
+
+```bash
 cd Brain_Tumour_Urgency_Alert_System
 ```
 
