@@ -119,3 +119,9 @@ pip install streamlit nibabel numpy scipy scikit-image
 ```bash
 streamlit run app.py
 ```
+
+---
+
+## Author
+
+Shohei Kotera
